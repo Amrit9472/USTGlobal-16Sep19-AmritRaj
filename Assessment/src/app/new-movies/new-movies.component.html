@@ -1,0 +1,34 @@
+<div class="col-md-4 offset-4 mt-4 mb-4">
+    <form action="" [formGroup]="form" class=" card card-body bg-success" (ngSubmit)="logindata(form)">
+        <h1 class="text-center text-white bg-dark">Add Movies</h1>
+        <div class="form-group ">
+            <input type="text" name="text" id="text" class="form-control" placeholder="Add Movies...." formControlName="Amov">
+            <div *ngIf ="Amov.touched && Amov.invalid">
+                <p *ngIf= "Amov.errors.required" class=" text-danger">this field required</p>
+                <p *ngIf= "Amov.errors.unique" class=" text-danger">text alresdy taken</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="text" id="text" class="form-control" placeholder="Movie Title" formControlName="Atit">
+            <div *ngIf ="Atit.touched && Atit.invalid">
+                    <p *ngIf= "Atit.errors.required" class=" text-danger">this field required</p>
+                </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="text" id="text" class="form-control" placeholder="Movie img Url" formControlName="img">
+            <div *ngIf ="img.touched && img.invalid">
+                    <p *ngIf= "img.errors.required" class=" text-danger">this field required</p>
+                </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name=" text " id="text" class="form-control" placeholder="Movie Description" formControlName="txt">
+            <div *ngIf ="txt.touched && txt.invalid">
+                    <p *ngIf= "txt.errors.required" class=" text-danger">this field required</p>
+                </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary float-right" [disabled]="form.invalid">Login</button>
+            
+        </div>
+    </form>
+</div>      

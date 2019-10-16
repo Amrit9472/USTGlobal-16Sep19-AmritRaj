@@ -1,0 +1,27 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form ="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Register Form</h1>
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Please Login......" #email="ngModel" ngModel required minlength="6">
+        <div *ngIf="email.touched  && email.invalid">
+            <p *ngIf="email.errors.required" class="alert alert-danger">this field is required</p>
+         <p *ngIf="email.errors.minlength" class="alert alert-danger">*Please enter more than 6 letter</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter email....." #password="ngModel" ngModel required>
+        <div *ngIf="password.touched && password.invalid">
+            <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password...." #password="ngModel" ngModel required>
+        <div *ngIf="password.touched && password.invalid">
+            <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-outline-success float-right" type="submit" [disabled]="form.invalid "> login</button>
+    </div>  
+</form>
