@@ -1,0 +1,48 @@
+<!-- <app-header></app-header> -->
+<h1 [ngStyle]="{color : color , backgroundColor : colorName}">Home component</h1>
+<h1 [ngClass]="{'bg-dark' : isActive,'text-white':isActive,'bg-success' : !isActive }">Ng Class</h1>
+
+<h2>Forms Assignments</h2>
+
+<form action="" class="col-md-5 offset-4 mt-5 card card-body" #form ="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-danger text-white">Company Name</h1>
+    <div class="form-group">
+
+        <input type="name" name="name" id="name" required minlength="4" class="form-control" placeholder="Product Name." #Company="ngModel" ngModel required minlength="6">
+        <div *ngIf="company.touched && company.invalid">
+            <p *ngIf="company.errors.required" class="alert alert-danger">this field is required</p>
+            <p *ngIf="company.length" class="alert alert-danger">*Please enter more than 6 letter</p>
+       </div>
+        </div>
+
+    
+   
+        <div class="form-group">
+           <input type="text" name="text" id="text" class="form-control" placeholder="Porduct price" #Year="ngModel" ngModel required>
+              <div *ngIf="password.touched && password.invalid">
+             <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+ 
+        </div>
+        </div>
+        <div class="form-group">
+                <input type="text" name="text" id="text" class="form-control" placeholder="product dec" #Year="ngModel" ngModel required>
+                   <div *ngIf="password.touched && password.invalid">
+                  <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+      
+             </div>
+        </div>
+             <div>
+             <div class="form-group">
+                    <input type="text" name="text" id="text" class="form-control" placeholder="Location" #Location="ngModel" ngModel required>
+                       <div *ngIf="password.touched && password.invalid">
+                      <p class="alert alert-danger" *ngIf="password.errors.required">this </p>
+          
+                 </div>
+                </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <button class="btn btn-outline-success float-right" type="submit" [disabled]="form.invalid ">Add product</button>
+    </div> 
