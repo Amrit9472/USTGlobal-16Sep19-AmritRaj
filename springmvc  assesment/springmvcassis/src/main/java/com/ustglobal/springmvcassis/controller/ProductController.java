@@ -57,7 +57,7 @@ public class ProductController {
 		}
 		return "login";
 	}
-	@GetMapping("changepassword")
+	@GetMapping("/changepassword")
 	public String change(HttpServletRequest request) {
 		HttpSession session=request.getSession(false);
 		if(session!=null) {
@@ -66,7 +66,7 @@ public class ProductController {
 			return "login";
 		}
 	}
-	@PostMapping("changepassword")
+	@PostMapping("/changepassword")
 	public String change(@SessionAttribute(name= "user", required = false) User user,ModelMap map,String password) {
 		if(user!=null) {
 			service.updatePassword(user.getEmail(), password);

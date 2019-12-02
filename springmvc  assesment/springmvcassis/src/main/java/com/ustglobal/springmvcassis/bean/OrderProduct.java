@@ -16,7 +16,7 @@ public class OrderProduct {
 	@Column
 	@GeneratedValue
 	private int oid;
-	
+
 	private String pname;
 	@Column
 	private int quantity;
@@ -62,5 +62,5 @@ public class OrderProduct {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 }

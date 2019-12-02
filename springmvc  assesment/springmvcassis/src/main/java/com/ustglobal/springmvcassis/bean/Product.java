@@ -23,7 +23,7 @@ public class Product {
 	@Id
 	@Column
 	private String pname;
-	
+
 	public int getPid() {
 		return pid;
 	}
@@ -42,5 +42,5 @@ public class Product {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	
+
 }

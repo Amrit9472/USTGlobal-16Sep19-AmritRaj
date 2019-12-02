@@ -18,7 +18,7 @@ import com.ustglobal.springmvcassis.bean.User;
 public class ProductDaoImpl implements ProductDAO{
 	@PersistenceUnit
 	private EntityManagerFactory factory;
-	
+
 	@Override
 	public User login(String email, String password) {
 		EntityManager manager=factory.createEntityManager();
@@ -62,7 +62,7 @@ public class ProductDaoImpl implements ProductDAO{
 			e.printStackTrace();
 			return null;
 		}
-		
+
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class ProductDaoImpl implements ProductDAO{
 			e.printStackTrace();
 			return false;
 		}
-	
+
 	}
 
 	@Override
