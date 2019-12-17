@@ -1,0 +1,4 @@
+#grad{
+    height: 200px;
+    background: liner-gradient(red, yellow, green, black)
+}

@@ -1,0 +1,146 @@
+ nav,
+ header
+ footer {
+    display: block;
+    }
+nav{
+    width:100%;
+    margin: 0%;
+}
+nav ul {
+    background-color:black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  ul.topnav li {
+    list-style: none;
+    float: left;
+  }  
+  ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color:white;
+  }
+  ul.topnav li a:hover {
+    background-color: #0080ff;
+    color: #fff;
+  }
+  
+  /* section2 */
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div button{
+      width: 350px;
+      height: 50px;
+      background-color: rgb(0, 195, 255);
+      text-align: center;
+      padding: 5px black;
+      text-transform: uppercase;
+
+  }
+  div img{
+      width: 400px;
+      height: 400px;
+      border-radius:400px;
+  }
+  div,h1{
+      /* margin-top: 50px; */
+      padding: 10px;
+      text-align: center;
+      
+  }
+  div.column,h1,p{
+    text-align: center;
+    padding: 0px;
+    
+}
+/* section3 */
+header{
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.column2 {
+    float: left;
+    width: 25%;
+    padding: 45px;
+    box-shadow:  2.5px 2.5px 2.5px 2.5px #888888;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+
+   
+  }
+  div.column2 img{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+
+   
+}
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 25px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 400px;
+    height: 250px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
