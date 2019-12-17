@@ -1,0 +1,50 @@
+<p>form1 works!</p>
+<form>
+        <div class="col-md-4 offset-4 mt-5 card card-body">
+        <h1 class="text-center bg-dark text-white">Company details</h1>
+        <div class="form-group">
+          <input type="text" class="form-control" id="CompanyName" placeholder="CompanyName" #CompanyName="ngModel" ngModel required minlength="6">
+        </div>
+        <div *ngIf="CompanyName.touched  && CompanyName.invalid">
+                <p *ngIf="CompanyName.errors.required" class="alert alert-danger">this field is required</p>
+             <p *ngIf="CompanyName.errors.minlength" class="alert alert-danger">*Please enter more than 6 letter</p>
+            </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Skills</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Java</option>
+            <option>Angular</option>
+            <option>Sql</option>
+            <option>python</option>
+            <option>j2ee</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Year Of Exp</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="MCTC">
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlSelect2">Location</label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                  <option>india</option>
+                  <option>usa</option>
+                  <option>china</option>
+                  <option>Australia</option>
+                  <option>other</option>
+                </select>
+              </div>
+        <div class="form-group">
+                <button class="btn btn-outline-success float-right" type="submit" [disabled]="form.invalid "> Register</button>
+            </div>  
+        
+    </div>
+      </form>

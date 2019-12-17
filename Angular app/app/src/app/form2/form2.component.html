@@ -1,0 +1,52 @@
+<p>form2 works!</p>
+<form>
+        <div class="col-md-4 offset-4 mt-5 card card-body">
+        <h1 class="text-center bg-danger text-white">Details</h1>
+        <div class="form-group">
+             <input type="text" class="form-control" id="UserName" placeholder="User Name" #CompanyName="ngModel" ngModel required minlength="6">
+             <div *ngIf="CompanyName.touched  && CompanyName.invalid">
+               <p *ngIf="CompanyName.errors.required" class="alert alert-danger">this field is required</p>
+            <p *ngIf="CompanyName.errors.minlength" class="alert alert-danger">*Please enter more than 6 letter</p>
+           </div>
+          </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="UserPage" placeholder="User Page" #CompanyName="ngModel" ngModel required minlength="6">
+        </div>
+       
+        <div class="form-group">
+            <fieldset data-role="controlgroup">
+                 <legend>Choose your gender:</legend>
+                          <label for="male">Male</label>
+                          <input type="radio" name="gender" id="male" value="male" checked>
+                          <label for="female">Female</label>
+                          <input type="radio" name="gender" id="female" value="female">
+                          <label for="female">other</label>
+                          <input type="radio" name="gender" id="other" value="other">
+              </fieldset>
+          
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control" placeholder="enter email" #email="ngModel" ngModel required minlength="6">
+        </div>
+       
+        <div class="form-group">
+             <input type="text" class="form-control" id="Contact Number" placeholder="Contact Number">
+        </div>
+        <div class="form-group">
+             <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" #password="ngModel" ngModel required>
+             <div *ngIf="password.touched && password.invalid">
+                  <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+              </div> 
+         </div> 
+         <div class="form-group">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Re-Enter password" #password="ngModel" ngModel required>
+            <div *ngIf="password.touched && password.invalid">
+                 <p class="alert alert-danger" *ngIf="password.errors.required">this filed is required</p>
+        </div> 
+     </div>         
+        <div class="form-group">
+                <button class="btn btn-outline-success float-right" type="submit" [disabled]="form.invalid ">Add User</button>
+            </div>  
+        
+    </div>
+      </form>
