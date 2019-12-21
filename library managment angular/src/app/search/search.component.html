@@ -1,0 +1,35 @@
+<p>search works!</p>
+<form #form1 = 'ngForm' (ngSubmit)="getStudent(form1)" class="col-md-4 offset-4 mt-5 card card-body">
+  <h1 class="text-center bg-dark text-white">Search Student</h1>
+  <div class="form-group">
+      <input type="number" name="rollno" id="rollno" class="form-control" placeholder="Enter Roll Number to search" #rollno='ngModel' ngModel>
+     
+  </div>
+  <div class="form-group">
+    <button id="cancel" name="cancel" class="btn btn-secondary" (click)="cancel()" value="1">Cancel</button>
+    <button type="submit" class="btn btn-outline-primary float-right">Search</button>
+  </div>
+</form>
+<div *ngIf= 'myStudent !==null'>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>ROLL NO.</th>
+          <th>STUDENT NAME</th>
+          <th>DEPARTMENT</th>
+          <th>GENDER</th>
+          <th>PASSWORD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{myStudent.rollno}}</td>
+          <td>{{myStudent.name}}</td>
+          <td>{{myStudent.department}}</td>
+          <td>{{myStudent.gender}}</td>
+          <td>{{myStudent.password}}</td>
+          <!-- <td><button class="btn btn-success">Request Book</button></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>

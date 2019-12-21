@@ -1,0 +1,40 @@
+<div *ngIf='isLoggedIn()' class="wrapper float-left" >
+  <button type="button" class="btn btn-outline-primary" (click)='showsaerch()'>Add Book</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary" (click)='displaysaerch()' routerLink='/search'>Search Student</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary" (click)='searchbook()' routerLink='/updatebook'>Update Book</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary" (click)='logout()'>Logout</button>
+
+</div>
+
+
+<form #form='ngForm' (ngSubmit)="add(form)" class="col-md-4 offset-4 mt-5 card card-body" *ngIf="show">
+  <h1 class="text-center bg-dark text-white">Add Book</h1>
+  <div class="form-group">
+    <input type="text" name="bname" id="bname" class="form-control" placeholder="Enter Book Name" #bname='ngModel'
+      ngModel>
+    <!-- <button type="submit" class="btn btn-outline-primary float-right">Search</button> -->
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="bauthor" id="bauthor" class="form-control" placeholder="Enter Author Name"
+      #bauthor='ngModel' ngModel>
+
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="publication" id="publication" class="form-control" placeholder="Enter publication Name"
+      #publication='ngModel' ngModel>
+
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-primary float-right">Add</button>
+  </div>
+</form>
+

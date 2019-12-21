@@ -1,0 +1,35 @@
+<div class = 'text-danger' *ngIf = 'msg'>
+    <p class = 'text-danger'>{{msg}}</p>
+</div>
+<form #form='ngForm' (ngSubmit)="update(form)" class="col-md-4 offset-4 mt-5 card card-body">
+    <h1 class="text-center bg-dark text-white">Update Book</h1>
+
+    <div class="form-group">
+        <input type="text" name="bid" id="bid" class="form-control" placeholder="Enter Book ID" #bid='ngModel'
+          ngModel>
+        <!-- <button type="submit" class="btn btn-outline-primary float-right">Search</button> -->
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="bname" id="bname" class="form-control" placeholder="Enter Book Name" #bname='ngModel'
+        ngModel>
+      <!-- <button type="submit" class="btn btn-outline-primary float-right">Search</button> -->
+    </div>
+  
+    <div class="form-group">
+      <input type="text" name="bauthor" id="bauthor" class="form-control" placeholder="Enter Author Name"
+        #bauthor='ngModel' ngModel>
+  
+    </div>
+  
+    <div class="form-group">
+      <input type="text" name="publication" id="publication" class="form-control" placeholder="Enter publication Name"
+        #publication='ngModel' ngModel>
+  
+    </div>
+  
+    <div class="form-group">
+      <button type="submit" class="btn btn-outline-primary float-right">Add</button>
+    </div>
+  </form>
+  
