@@ -1,0 +1,21 @@
+.jumbotron{
+    text-align: center;
+    background-color: white;
+}
+.sectionalLight{
+    background-color: #eceeef;
+    padding: 2rem;
+}
+.sectiondark{
+ background-color: #cccccc;
+    padding: 2rem;
+}
+.coolStuffWrapper{
+    margin-top: 20px;
+}
+button.coolStuffBtn{
+    background-color: cornflowerblue;
+    color: #ffffff;
+    display: block;
+    margin: auto;
+}
